@@ -21,7 +21,7 @@ function banner () {
 
 function menu () {
     echo -e "$red [~] Ingresa la IP a la que realizar el escaneo: "
-    echo -e -n "--->"
+    echo -e -n "[~] ---> "
     read ip
     echo -e "$red ----------------------------------------------------------------------------"
     echo -e "$yellow [~] Escaneo estándar: "
