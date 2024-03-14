@@ -8,6 +8,7 @@ yellow="\e[1;33m"
 red="\e[1;31m"
 
 function banner () {
+    sudo clear
     echo -e "$red ----------------------------------------------------------------------------"
     echo -e "$yellow ▐ ▄ • ▌ ▄ ·.  ▄▄▄·  ▄▄▄·    .▄▄ ·  ▄▄·  ▄▄▄·  ▐ ▄  ▐ ▄ ▄▄▄ .▄▄▄  "
     echo -e "$yellow•█▌▐█·██ ▐███▪▐█ ▀█ ▐█ ▄█    ▐█ ▀. ▐█ ▌▪▐█ ▀█ •█▌▐█•█▌▐█▀▄.▀·▀▄ █·"
@@ -24,10 +25,25 @@ function menu () {
     read ip
     echo -e "$red ----------------------------------------------------------------------------"
     echo -e "$yellow [~] Escaneo estándar: "
-    nmap $ip
+    sudo nmap $ip
     echo -e "$red ----------------------------------------------------------------------------"
     echo -e "$yellow [~] Para obtener información del sistema operativo: "
-    nmap -A -v $ip
+    sudo nmap -A -v $ip
+    echo -e "$red ----------------------------------------------------------------------------"
+    echo -e "$yellow [~] Script auth: "
+    sudo nmap -f -sS -sV -Pn --script auth $ip
+    echo -e "$red ----------------------------------------------------------------------------"
+    echo -e "$yellow [~] Script default: "
+    sudo nmap -f -sS -sV -Pn --script default $ip
+    echo -e "$red ----------------------------------------------------------------------------"
+    echo -e "$yellow [~] Script safe: "
+    sudo nmap -f -sS -sV -Pn --script safe $ip
+    echo -e "$red ----------------------------------------------------------------------------"
+    echo -e "$yellow [~] Script vuln: "
+    sudo nmap -f -sS -sV -Pn --script vuln $ip
+    echo -e "$red ----------------------------------------------------------------------------"
+    echo -e "$yellow [~] Script all: "
+    sudo nmap -f -sS -sV -Pn --script all $ip
     echo -e "$red ----------------------------------------------------------------------------"
 }
 
