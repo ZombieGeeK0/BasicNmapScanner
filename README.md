@@ -5,7 +5,6 @@
     git clone https://github.com/ZombieGeeK0/BasicNmapScanner && cd BasicNmapScanner && chmod +x install.sh && chmod 777 install.sh && sudo bash install.sh
     ==========================================================================================================================================================
     [~] Para inciciar el programa: sudo bash basicscanner.sh
-
     ===========================================================================================================================0==============================
 
     `[ 📬 ]` Contacta conmigo a través de `Discord` mandando una invitación a `qwfkr.`
