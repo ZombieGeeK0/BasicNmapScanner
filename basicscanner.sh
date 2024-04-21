@@ -8,44 +8,43 @@ yellow="\e[1;33m"
 red="\e[1;31m"
 
 function banner () {
-    sudo clear
-    echo -e "$red ----------------------------------------------------------------------------"
-    echo -e "$yellow ▐ ▄ • ▌ ▄ ·.  ▄▄▄·  ▄▄▄·    .▄▄ ·  ▄▄·  ▄▄▄·  ▐ ▄  ▐ ▄ ▄▄▄ .▄▄▄  "
-    echo -e "$yellow•█▌▐█·██ ▐███▪▐█ ▀█ ▐█ ▄█    ▐█ ▀. ▐█ ▌▪▐█ ▀█ •█▌▐█•█▌▐█▀▄.▀·▀▄ █·"
-    echo -e "$yellow▐█▐▐▌▐█ ▌▐▌▐█·▄█▀▀█  ██▀·    ▄▀▀▀█▄██ ▄▄▄█▀▀█ ▐█▐▐▌▐█▐▐▌▐▀▀▪▄▐▀▀▄ "
-    echo -e "$red   ██▐█▌██ ██▌▐█▌▐█ ▪▐▌▐█▪·•    ▐█▄▪▐█▐███▌▐█ ▪▐▌██▐█▌██▐█▌▐█▄▄▌▐█•█▌"
-    echo -e "$red   ▀▀ █▪▀▀  █▪▀▀▀ ▀  ▀ .▀        ▀▀▀▀ ·▀▀▀  ▀  ▀ ▀▀ █▪▀▀ █▪ ▀▀▀ .▀  ▀"
-    echo -e "$red ©2024 By ZombieGeek0 (https://www.github.com/ZombieGeek0)"
-    echo -e "$white ----------------------------------------------------------------------------"
+    clear
+    echo -e "$red -------------------------------------------------------------------------------------------"
+    echo -e "$yellow╔╗╔┌┬┐┌─┐┌─┐  ╔═╗┌─┐┌─┐┌┐┌┌┐┌┌─┐┬─┐"
+    echo -e "$yellow║║║│││├─┤├─┘  ╚═╗│  ├─┤││││││├┤ ├┬┘"
+    echo -e "$yellow╝╚╝┴ ┴┴ ┴┴    ╚═╝└─┘┴ ┴┘└┘┘└┘└─┘┴└─"
+    echo -e "$red ©2024 By ZombieGeek0 (https://www.github.com/ZombieGeek0/BasicNmapScanner)"
+    echo -e "$red -------------------------------------------------------------------------------------------"
 }
 
 function menu () {
-    echo -e "$red [~] Ingresa la IP a la que realizar el escaneo: "
-    echo -e -n "[~] ---> "
+    echo -e "$red [+] Ingresa la IP a la que realizar el escaneo: "
+    echo -e -n "[+] ---> "
     read ip
-    echo -e "$red ----------------------------------------------------------------------------"
-    echo -e "$yellow [~] Escaneo estándar: "
+    echo -e "$red -------------------------------------------------------------------------------------------"
+    echo -e "$yellow [+] Escaneo estándar: "
     sudo nmap $ip
-    echo -e "$red ----------------------------------------------------------------------------"
-    echo -e "$yellow [~] Para obtener información del sistema operativo: "
+    echo -e "$red -------------------------------------------------------------------------------------------"
+    echo -e "$yellow [+] Para obtener información del sistema operativo: "
     sudo nmap -A -v $ip
-    echo -e "$red ----------------------------------------------------------------------------"
-    echo -e "$yellow [~] Script auth: "
+    echo -e "$red -------------------------------------------------------------------------------------------"
+    echo -e "$yellow [+] Script auth: "
     sudo nmap -f -sS -sV -Pn --script auth $ip
-    echo -e "$red ----------------------------------------------------------------------------"
-    echo -e "$yellow [~] Script default: "
+    echo -e "$red -------------------------------------------------------------------------------------------"
+    echo -e "$yellow [+] Script default: "
     sudo nmap -f -sS -sV -Pn --script default $ip
-    echo -e "$red ----------------------------------------------------------------------------"
-    echo -e "$yellow [~] Script safe: "
+    echo -e "$red -------------------------------------------------------------------------------------------"
+    echo -e "$yellow [+] Script safe: "
     sudo nmap -f -sS -sV -Pn --script safe $ip
-    echo -e "$red ----------------------------------------------------------------------------"
-    echo -e "$yellow [~] Script vuln: "
+    echo -e "$red -------------------------------------------------------------------------------------------"
+    echo -e "$yellow [+] Script vuln: "
     sudo nmap -f -sS -sV -Pn --script vuln $ip
-    echo -e "$red ----------------------------------------------------------------------------"
-    echo -e "$yellow [~] Script all: "
+    echo -e "$red -------------------------------------------------------------------------------------------"
+    echo -e "$yellow [+] Script all: "
     sudo nmap -f -sS -sV -Pn --script all $ip
-    echo -e "$red ----------------------------------------------------------------------------"
+    echo -e "$red -------------------------------------------------------------------------------------------"
 }
 
+sudo clear
 banner
 menu
