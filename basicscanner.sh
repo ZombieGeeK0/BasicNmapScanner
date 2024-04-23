@@ -7,7 +7,7 @@ green="\e[1;32m"
 yellow="\e[1;33m"
 red="\e[1;31m"
 
-function banner () {
+function banner() {
     clear
     echo -e "$red -------------------------------------------------------------------------------------------"
     echo -e "$yellow╔╗╔┌┬┐┌─┐┌─┐  ╔═╗┌─┐┌─┐┌┐┌┌┐┌┌─┐┬─┐"
@@ -17,7 +17,7 @@ function banner () {
     echo -e "$red -------------------------------------------------------------------------------------------"
 }
 
-function menu () {
+function menu() {
     echo -e "$red [+] Ingresa la IP a la que realizar el escaneo: "
     echo -e -n "[+] ---> "
     read ip
