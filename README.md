@@ -1,3 +1,11 @@
+# BasicNmapScanner
+
+`[-]` Instalación en Linux:
+
+```shell
+git clone https://github.com/ZombieGeeK0/BasicNmapScanner && cd BasicNmapScanner && chmod +x install.sh && chmod 777 install.sh && sudo bash install.sh && sudo bash basicscanner.sh
+```
+
 <hr>
 
 `[ 📬 ]` Contacta conmigo a través de `Discord` mandando una invitación a `qwfkr.`
